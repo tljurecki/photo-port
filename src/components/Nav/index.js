@@ -25,14 +25,14 @@ function Nav() {
     return(
         <header>
             <h2>
-                <a href="/">
+                <a data-testid="link" href="/">
                     <span role="img" aria-label="camera">📸</span> Oh Snap!
                 </a>
             </h2>
             <nav>
-                <ul classname="flex-row">
-                    <li classname="mx-2">
-                        <a href="#about">
+                <ul className="flex-row">
+                    <li className="mx-2">
+                        <a data-testid="about" href="#about">
                             About me
                         </a>
                     </li>
@@ -41,7 +41,7 @@ function Nav() {
                     </li>
                     {categories.map((category) => (
                         <li 
-                        classname="mx-1"
+                        className="mx-1"
                         key={category.name}
                         > 
                         <span onClick={() => categorySelected(category.name)} >
